@@ -19,7 +19,6 @@ export const metadata: Metadata = {
   },
   description,
   applicationName: siteName,
-  generator: "v0.app",
   keywords: [
     "iris casino",
     "iris casino зеркало",
