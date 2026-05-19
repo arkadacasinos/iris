@@ -7,7 +7,7 @@ const geist = Geist({ subsets: ["latin", "cyrillic"] })
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
 const siteName = "Iris казино"
-const title = "Ирис казино - официальный сайт онлайн Iris casino играть и зеркало"
+const title = "Ирис казино официальный сайт онлайн Iris casino играть и зеркало"
 const description =
   "Ирис казино: официальный сайт онлайн казино с рабочим зеркалом. Iris казино играть онлайн в слоты, лайв и карточные игры. Бонусы Iris casino - Welcome Pack до 50%, быстрые выплаты и более 8000 игр от ведущих провайдеров."
 
