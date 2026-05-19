@@ -79,7 +79,7 @@ export const metadata: Metadata = {
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
-    yandex: "",
+    yandex: "8d93d51ee24130eb",
   },
   other: {
     "rating": "adult",
